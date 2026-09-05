@@ -1,0 +1,1117 @@
+{
+  "metadata": {
+    "source_file": "raw-text.txt",
+    "generated_at": "2026-09-05T15:09:41+00:00",
+    "characters_scanned": 5742,
+    "lines_scanned": 91,
+    "generator": "alu-regex-data-extraction v1.0"
+  },
+  "security": {
+    "input_trusted": false,
+    "sanitisation_notes": [],
+    "threats_detected": 15,
+    "threat_summary": {
+      "xss_script_tag": 4,
+      "xss_event_handler": 1,
+      "xss_embedded_frame": 1,
+      "unsafe_uri_scheme": 3,
+      "sql_injection": 2,
+      "template_injection": 1,
+      "command_injection": 1,
+      "path_traversal": 1,
+      "crlf_injection": 1
+    },
+    "threat_findings": [
+      {
+        "signature": "xss_script_tag",
+        "line": 36,
+        "length": 8,
+        "payload_sha256_16": "5b63e5b2097fc690",
+        "action": "rejected_and_quarantined"
+      },
+      {
+        "signature": "xss_script_tag",
+        "line": 36,
+        "length": 9,
+        "payload_sha256_16": "6c9656210a020271",
+        "action": "rejected_and_quarantined"
+      },
+      {
+        "signature": "xss_script_tag",
+        "line": 76,
+        "length": 8,
+        "payload_sha256_16": "5b63e5b2097fc690",
+        "action": "rejected_and_quarantined"
+      },
+      {
+        "signature": "xss_script_tag",
+        "line": 76,
+        "length": 9,
+        "payload_sha256_16": "6c9656210a020271",
+        "action": "rejected_and_quarantined"
+      },
+      {
+        "signature": "xss_event_handler",
+        "line": 37,
+        "length": 8,
+        "payload_sha256_16": "80b9aa688e5b8751",
+        "action": "rejected_and_quarantined"
+      },
+      {
+        "signature": "xss_embedded_frame",
+        "line": 75,
+        "length": 7,
+        "payload_sha256_16": "ab6546c7cfa31ce7",
+        "action": "rejected_and_quarantined"
+      },
+      {
+        "signature": "unsafe_uri_scheme",
+        "line": 38,
+        "length": 11,
+        "payload_sha256_16": "e3a99cdc7eb3e7a8",
+        "action": "rejected_and_quarantined"
+      },
+      {
+        "signature": "unsafe_uri_scheme",
+        "line": 50,
+        "length": 5,
+        "payload_sha256_16": "430473329df5ca20",
+        "action": "rejected_and_quarantined"
+      },
+      {
+        "signature": "unsafe_uri_scheme",
+        "line": 51,
+        "length": 5,
+        "payload_sha256_16": "ff72caa36dca2baa",
+        "action": "rejected_and_quarantined"
+      },
+      {
+        "signature": "sql_injection",
+        "line": 34,
+        "length": 11,
+        "payload_sha256_16": "230c6acd26079d75",
+        "action": "rejected_and_quarantined"
+      },
+      {
+        "signature": "sql_injection",
+        "line": 34,
+        "length": 4,
+        "payload_sha256_16": "e07cf4d397d6c7f4",
+        "action": "rejected_and_quarantined"
+      },
+      {
+        "signature": "template_injection",
+        "line": 53,
+        "length": 7,
+        "payload_sha256_16": "d095461aa3182fe4",
+        "action": "rejected_and_quarantined"
+      },
+      {
+        "signature": "command_injection",
+        "line": 54,
+        "length": 45,
+        "payload_sha256_16": "11b160759099b504",
+        "action": "rejected_and_quarantined"
+      },
+      {
+        "signature": "path_traversal",
+        "line": 55,
+        "length": 12,
+        "payload_sha256_16": "7f401090ee0923ce",
+        "action": "rejected_and_quarantined"
+      },
+      {
+        "signature": "crlf_injection",
+        "line": 56,
+        "length": 6,
+        "payload_sha256_16": "e4153683cc69e4b3",
+        "action": "rejected_and_quarantined"
+      }
+    ],
+    "redaction_policy": {
+      "emails": "local part masked after 2 characters; domain retained",
+      "credit_cards": "last 4 digits only (stricter than PCI-DSS allows)",
+      "phone_numbers": "middle digits masked",
+      "hostile_payloads": "never stored raw; SHA-256 fingerprint only"
+    }
+  },
+  "summary": {
+    "emails": {
+      "valid": 18,
+      "rejected": 2
+    },
+    "urls": {
+      "valid": 6,
+      "rejected": 4
+    },
+    "phone_numbers": {
+      "valid": 10,
+      "rejected": 0
+    },
+    "credit_cards": {
+      "valid": 4,
+      "rejected": 3
+    },
+    "times": {
+      "valid": 37,
+      "rejected": 0
+    },
+    "html_tags": {
+      "valid": 14,
+      "rejected": 7
+    },
+    "hashtags": {
+      "valid": 9,
+      "rejected": 0
+    },
+    "currency_amounts": {
+      "valid": 24,
+      "rejected": 0
+    }
+  },
+  "alu_validation": {
+    "official_alueducation_com": 6,
+    "alumni_alueducation_com": 2,
+    "si_alueducation_com": 2,
+    "total_alu_addresses": 10
+  },
+  "extracted": {
+    "emails": {
+      "valid": [
+        {
+          "value": "m.******@alueducation.com",
+          "domain": "alueducation.com",
+          "alu_category": "alu_official",
+          "is_alu": true,
+          "sha256_16": "dad80f330994c2e9"
+        },
+        {
+          "value": "cy***************@gmail.com",
+          "domain": "gmail.com",
+          "alu_category": null,
+          "is_alu": false,
+          "sha256_16": "07219d48b07f7e3c"
+        },
+        {
+          "value": "op******@si.alueducation.com",
+          "domain": "si.alueducation.com",
+          "alu_category": "alu_si",
+          "is_alu": true,
+          "sha256_16": "fe08f9f6914e1caa"
+        },
+        {
+          "value": "bi*****@northgate-systems.co.uk",
+          "domain": "northgate-systems.co.uk",
+          "alu_category": null,
+          "is_alu": false,
+          "sha256_16": "44fc40273d3e1757"
+        },
+        {
+          "value": "o.*****@alumni.alueducation.com",
+          "domain": "alumni.alueducation.com",
+          "alu_category": "alu_alumni",
+          "is_alu": true,
+          "sha256_16": "12c1ebfa87495e68"
+        },
+        {
+          "value": "o.*****@alueducation.com",
+          "domain": "alueducation.com",
+          "alu_category": "alu_official",
+          "is_alu": true,
+          "sha256_16": "2a71c54e87d72e46"
+        },
+        {
+          "value": "o.*****@alumni.alueducation.co",
+          "domain": "alumni.alueducation.co",
+          "alu_category": null,
+          "is_alu": false,
+          "sha256_16": "a485cb89877fed4c"
+        },
+        {
+          "value": "at******@evil.example.com",
+          "domain": "evil.example.com",
+          "alu_category": null,
+          "is_alu": false,
+          "sha256_16": "3fb3d1a3187243d7"
+        },
+        {
+          "value": "k.*******@alueducation.com",
+          "domain": "alueducation.com",
+          "alu_category": "alu_official",
+          "is_alu": true,
+          "sha256_16": "ad770d1d0b47d191"
+        },
+        {
+          "value": "k.*******@alueducation.com.attacker.net",
+          "domain": "alueducation.com.attacker.net",
+          "alu_category": null,
+          "is_alu": false,
+          "sha256_16": "ba1c4e980c930c2e"
+        },
+        {
+          "value": "ad***@alu.rw",
+          "domain": "alu.rw",
+          "alu_category": null,
+          "is_alu": false,
+          "sha256_16": "5219436ed12f1406"
+        },
+        {
+          "value": "ev******@alueducation.com",
+          "domain": "alueducation.com",
+          "alu_category": "alu_official",
+          "is_alu": true,
+          "sha256_16": "a6b16051f6428094"
+        },
+        {
+          "value": "di******@si.alueducation.com",
+          "domain": "si.alueducation.com",
+          "alu_category": "alu_si",
+          "is_alu": true,
+          "sha256_16": "8fac90272db18d66"
+        },
+        {
+          "value": "se*********@example.org",
+          "domain": "example.org",
+          "alu_category": null,
+          "is_alu": false,
+          "sha256_16": "232a1b95068cd152"
+        },
+        {
+          "value": "we******@sub.domain.example.co.jp",
+          "domain": "sub.domain.example.co.jp",
+          "alu_category": null,
+          "is_alu": false,
+          "sha256_16": "320b88216aca1f8c"
+        },
+        {
+          "value": "e.*******@alumni.alueducation.com",
+          "domain": "alumni.alueducation.com",
+          "alu_category": "alu_alumni",
+          "is_alu": true,
+          "sha256_16": "aa15b9988727ac2f"
+        },
+        {
+          "value": "de**@alueducation.com",
+          "domain": "alueducation.com",
+          "alu_category": "alu_official",
+          "is_alu": true,
+          "sha256_16": "ab9d132ce2cd0f05"
+        },
+        {
+          "value": "mc*****@alueducation.com",
+          "domain": "alueducation.com",
+          "alu_category": "alu_official",
+          "is_alu": true,
+          "sha256_16": "3233b0c168e657c6"
+        }
+      ],
+      "rejected": [
+        {
+          "value": "ja*******@example.com",
+          "reason": "consecutive dots are not allowed"
+        },
+        {
+          "value": "k.*******@alueducation.com",
+          "reason": "address appears inside a hostile construct and was not trusted"
+        }
+      ],
+      "alu_official": [
+        {
+          "value": "m.******@alueducation.com",
+          "domain": "alueducation.com",
+          "alu_category": "alu_official",
+          "is_alu": true,
+          "sha256_16": "dad80f330994c2e9"
+        },
+        {
+          "value": "o.*****@alueducation.com",
+          "domain": "alueducation.com",
+          "alu_category": "alu_official",
+          "is_alu": true,
+          "sha256_16": "2a71c54e87d72e46"
+        },
+        {
+          "value": "k.*******@alueducation.com",
+          "domain": "alueducation.com",
+          "alu_category": "alu_official",
+          "is_alu": true,
+          "sha256_16": "ad770d1d0b47d191"
+        },
+        {
+          "value": "ev******@alueducation.com",
+          "domain": "alueducation.com",
+          "alu_category": "alu_official",
+          "is_alu": true,
+          "sha256_16": "a6b16051f6428094"
+        },
+        {
+          "value": "de**@alueducation.com",
+          "domain": "alueducation.com",
+          "alu_category": "alu_official",
+          "is_alu": true,
+          "sha256_16": "ab9d132ce2cd0f05"
+        },
+        {
+          "value": "mc*****@alueducation.com",
+          "domain": "alueducation.com",
+          "alu_category": "alu_official",
+          "is_alu": true,
+          "sha256_16": "3233b0c168e657c6"
+        }
+      ],
+      "alu_alumni": [
+        {
+          "value": "o.*****@alumni.alueducation.com",
+          "domain": "alumni.alueducation.com",
+          "alu_category": "alu_alumni",
+          "is_alu": true,
+          "sha256_16": "12c1ebfa87495e68"
+        },
+        {
+          "value": "e.*******@alumni.alueducation.com",
+          "domain": "alumni.alueducation.com",
+          "alu_category": "alu_alumni",
+          "is_alu": true,
+          "sha256_16": "aa15b9988727ac2f"
+        }
+      ],
+      "alu_si": [
+        {
+          "value": "op******@si.alueducation.com",
+          "domain": "si.alueducation.com",
+          "alu_category": "alu_si",
+          "is_alu": true,
+          "sha256_16": "fe08f9f6914e1caa"
+        },
+        {
+          "value": "di******@si.alueducation.com",
+          "domain": "si.alueducation.com",
+          "alu_category": "alu_si",
+          "is_alu": true,
+          "sha256_16": "8fac90272db18d66"
+        }
+      ]
+    },
+    "urls": {
+      "valid": [
+        {
+          "value": "https://support.alueducation.com/kb/article?id=4471&lang=en",
+          "scheme": "https",
+          "host": "support.alueducation.com",
+          "port": null,
+          "has_query": true,
+          "insecure_transport": false
+        },
+        {
+          "value": "http://legacy-billing.northgate-systems.co.uk:8080/inv/2026/Q1-0221.pdf?token=a9f3c1",
+          "scheme": "http",
+          "host": "legacy-billing.northgate-systems.co.uk",
+          "port": "8080",
+          "has_query": true,
+          "insecure_transport": true
+        },
+        {
+          "value": "https://phish.example.net/login",
+          "scheme": "https",
+          "host": "phish.example.net",
+          "port": null,
+          "has_query": false,
+          "insecure_transport": false
+        },
+        {
+          "value": "https://hooks.partner-api.io/v2/events/ingest?sig=8f21ab",
+          "scheme": "https",
+          "host": "hooks.partner-api.io",
+          "port": null,
+          "has_query": true,
+          "insecure_transport": false
+        },
+        {
+          "value": "https://cdn.example.com/logo.png",
+          "scheme": "https",
+          "host": "cdn.example.com",
+          "port": null,
+          "has_query": false,
+          "insecure_transport": false
+        },
+        {
+          "value": "https://alu.rw/x9Fq2",
+          "scheme": "https",
+          "host": "alu.rw",
+          "port": null,
+          "has_query": false,
+          "insecure_transport": false
+        }
+      ],
+      "rejected": [
+        {
+          "value": "[quarantined: exfil.evil.example.com]",
+          "reason": "URL appears inside a hostile construct and was not trusted"
+        },
+        {
+          "value": "[quarantined: evil.example.com]",
+          "reason": "URL appears inside a hostile construct and was not trusted"
+        },
+        {
+          "value": "[quarantined: ads.tracker.example.net]",
+          "reason": "URL appears inside a hostile construct and was not trusted"
+        },
+        {
+          "value": "[quarantined: phish.example.net]",
+          "reason": "URL appears inside a hostile construct and was not trusted"
+        }
+      ]
+    },
+    "phone_numbers": {
+      "valid": [
+        {
+          "masked": "2507******71",
+          "format_seen": "international",
+          "region": "RW",
+          "digits": 12
+        },
+        {
+          "masked": "4420******58",
+          "format_seen": "international",
+          "region": "GB",
+          "digits": 12
+        },
+        {
+          "masked": "0207*****22",
+          "format_seen": "national",
+          "region": "national (country code absent)",
+          "digits": 11
+        },
+        {
+          "masked": "0788****45",
+          "format_seen": "national",
+          "region": "RW",
+          "digits": 10
+        },
+        {
+          "masked": "2507******00",
+          "format_seen": "international",
+          "region": "RW",
+          "digits": 12
+        },
+        {
+          "masked": "2507******91",
+          "format_seen": "international",
+          "region": "RW",
+          "digits": 12
+        },
+        {
+          "masked": "4155****47",
+          "format_seen": "national",
+          "region": "indeterminate",
+          "digits": 10
+        },
+        {
+          "masked": "1202*****98",
+          "format_seen": "international",
+          "region": "US/CA",
+          "digits": 11
+        },
+        {
+          "masked": "0722****08",
+          "format_seen": "national",
+          "region": "RW",
+          "digits": 10
+        },
+        {
+          "masked": "2507******63",
+          "format_seen": "international",
+          "region": "RW",
+          "digits": 12
+        }
+      ],
+      "rejected": []
+    },
+    "credit_cards": {
+      "valid": [
+        {
+          "masked": "************1111",
+          "brand": "Visa",
+          "length": 16,
+          "luhn_valid": true,
+          "sha256_16": "9bbef19476623ca5"
+        },
+        {
+          "masked": "************5559",
+          "brand": "Mastercard",
+          "length": 16,
+          "luhn_valid": true,
+          "sha256_16": "db3912d77ffa433c"
+        },
+        {
+          "masked": "***********0005",
+          "brand": "American Express",
+          "length": 15,
+          "luhn_valid": true,
+          "sha256_16": "3a134ef77d4e2e4c"
+        },
+        {
+          "masked": "************1117",
+          "brand": "Discover",
+          "length": 16,
+          "luhn_valid": true,
+          "sha256_16": "19ff47cc8024c133"
+        }
+      ],
+      "rejected": [
+        {
+          "masked": "************1112",
+          "reason": "fails the Luhn (mod-10) checksum"
+        },
+        {
+          "masked": "************3456",
+          "reason": "fails the Luhn (mod-10) checksum"
+        },
+        {
+          "masked": "******************1111",
+          "reason": "length 22 outside the valid 13-19 range"
+        }
+      ]
+    },
+    "times": {
+      "valid": [
+        {
+          "value": "04:15:22",
+          "format": "24-hour",
+          "normalised_24h": "04:15"
+        },
+        {
+          "value": "09:14",
+          "format": "24-hour",
+          "normalised_24h": "09:14"
+        },
+        {
+          "value": "08:00",
+          "format": "24-hour",
+          "normalised_24h": "08:00"
+        },
+        {
+          "value": "2:45 PM",
+          "format": "12-hour",
+          "normalised_24h": "14:45"
+        },
+        {
+          "value": "14:30",
+          "format": "24-hour",
+          "normalised_24h": "14:30"
+        },
+        {
+          "value": "11:02",
+          "format": "24-hour",
+          "normalised_24h": "11:02"
+        },
+        {
+          "value": "09:00",
+          "format": "24-hour",
+          "normalised_24h": "09:00"
+        },
+        {
+          "value": "11:00 AM",
+          "format": "12-hour",
+          "normalised_24h": "11:00"
+        },
+        {
+          "value": "16:47",
+          "format": "24-hour",
+          "normalised_24h": "16:47"
+        },
+        {
+          "value": "08:30",
+          "format": "24-hour",
+          "normalised_24h": "08:30"
+        },
+        {
+          "value": "17:00",
+          "format": "24-hour",
+          "normalised_24h": "17:00"
+        },
+        {
+          "value": "12:00",
+          "format": "24-hour",
+          "normalised_24h": "12:00"
+        },
+        {
+          "value": "13:00",
+          "format": "24-hour",
+          "normalised_24h": "13:00"
+        },
+        {
+          "value": "23:58",
+          "format": "24-hour",
+          "normalised_24h": "23:58"
+        },
+        {
+          "value": "08:00:04",
+          "format": "24-hour",
+          "normalised_24h": "08:00"
+        },
+        {
+          "value": "08:00:59",
+          "format": "24-hour",
+          "normalised_24h": "08:00"
+        },
+        {
+          "value": "09:15:31",
+          "format": "24-hour",
+          "normalised_24h": "09:15"
+        },
+        {
+          "value": "09:15:33",
+          "format": "24-hour",
+          "normalised_24h": "09:15"
+        },
+        {
+          "value": "09:16:02",
+          "format": "24-hour",
+          "normalised_24h": "09:16"
+        },
+        {
+          "value": "09:16:40",
+          "format": "24-hour",
+          "normalised_24h": "09:16"
+        },
+        {
+          "value": "13:44:12",
+          "format": "24-hour",
+          "normalised_24h": "13:44"
+        },
+        {
+          "value": "13:44:13",
+          "format": "24-hour",
+          "normalised_24h": "13:44"
+        },
+        {
+          "value": "18:05:00",
+          "format": "24-hour",
+          "normalised_24h": "18:05"
+        },
+        {
+          "value": "23:59:59",
+          "format": "24-hour",
+          "normalised_24h": "23:59"
+        },
+        {
+          "value": "22:10:45",
+          "format": "24-hour",
+          "normalised_24h": "22:10"
+        },
+        {
+          "value": "22:10:46",
+          "format": "24-hour",
+          "normalised_24h": "22:10"
+        },
+        {
+          "value": "22:10:47",
+          "format": "24-hour",
+          "normalised_24h": "22:10"
+        },
+        {
+          "value": "22:11:01",
+          "format": "24-hour",
+          "normalised_24h": "22:11"
+        },
+        {
+          "value": "7:30 AM",
+          "format": "12-hour",
+          "normalised_24h": "07:30"
+        },
+        {
+          "value": "1:15 pm",
+          "format": "12-hour",
+          "normalised_24h": "13:15"
+        },
+        {
+          "value": "09:45",
+          "format": "24-hour",
+          "normalised_24h": "09:45"
+        },
+        {
+          "value": "11:59 PM",
+          "format": "12-hour",
+          "normalised_24h": "23:59"
+        },
+        {
+          "value": "16:20",
+          "format": "24-hour",
+          "normalised_24h": "16:20"
+        },
+        {
+          "value": "00:00",
+          "format": "24-hour",
+          "normalised_24h": "00:00"
+        },
+        {
+          "value": "23:59",
+          "format": "24-hour",
+          "normalised_24h": "23:59"
+        },
+        {
+          "value": "12:00 AM",
+          "format": "12-hour",
+          "normalised_24h": "00:00"
+        },
+        {
+          "value": "12:00 PM",
+          "format": "12-hour",
+          "normalised_24h": "12:00"
+        }
+      ],
+      "rejected": []
+    },
+    "html_tags": {
+      "valid": [
+        {
+          "tag": "div",
+          "kind": "opening",
+          "has_attributes": true
+        },
+        {
+          "tag": "h2",
+          "kind": "opening",
+          "has_attributes": true
+        },
+        {
+          "tag": "h2",
+          "kind": "closing",
+          "has_attributes": false
+        },
+        {
+          "tag": "p",
+          "kind": "opening",
+          "has_attributes": false
+        },
+        {
+          "tag": "a",
+          "kind": "opening",
+          "has_attributes": true
+        },
+        {
+          "tag": "a",
+          "kind": "closing",
+          "has_attributes": false
+        },
+        {
+          "tag": "p",
+          "kind": "closing",
+          "has_attributes": false
+        },
+        {
+          "tag": "span",
+          "kind": "opening",
+          "has_attributes": true
+        },
+        {
+          "tag": "span",
+          "kind": "closing",
+          "has_attributes": false
+        },
+        {
+          "tag": "p",
+          "kind": "opening",
+          "has_attributes": false
+        },
+        {
+          "tag": "p",
+          "kind": "closing",
+          "has_attributes": false
+        },
+        {
+          "tag": "img",
+          "kind": "opening",
+          "has_attributes": true
+        },
+        {
+          "tag": "br",
+          "kind": "self-closing",
+          "has_attributes": false
+        },
+        {
+          "tag": "div",
+          "kind": "closing",
+          "has_attributes": false
+        }
+      ],
+      "rejected": [
+        {
+          "tag": "script",
+          "kind": "opening",
+          "has_attributes": false,
+          "reason": "tag or attribute is an XSS vector",
+          "sha256_16": "5b63e5b2097fc690"
+        },
+        {
+          "tag": "script",
+          "kind": "closing",
+          "has_attributes": false,
+          "reason": "tag or attribute is an XSS vector",
+          "sha256_16": "6c9656210a020271"
+        },
+        {
+          "tag": "img",
+          "kind": "opening",
+          "has_attributes": true,
+          "reason": "tag or attribute is an XSS vector",
+          "sha256_16": "5be547352644f9a1"
+        },
+        {
+          "tag": "iframe",
+          "kind": "opening",
+          "has_attributes": true,
+          "reason": "tag or attribute is an XSS vector",
+          "sha256_16": "85b7a6a5bf86d90b"
+        },
+        {
+          "tag": "iframe",
+          "kind": "closing",
+          "has_attributes": false,
+          "reason": "tag or attribute is an XSS vector",
+          "sha256_16": "c3fd26b6992050c2"
+        },
+        {
+          "tag": "script",
+          "kind": "opening",
+          "has_attributes": false,
+          "reason": "tag or attribute is an XSS vector",
+          "sha256_16": "5b63e5b2097fc690"
+        },
+        {
+          "tag": "script",
+          "kind": "closing",
+          "has_attributes": false,
+          "reason": "tag or attribute is an XSS vector",
+          "sha256_16": "6c9656210a020271"
+        }
+      ],
+      "tag_frequency": {
+        "script": 4,
+        "p": 4,
+        "img": 2,
+        "div": 2,
+        "h2": 2,
+        "a": 2,
+        "span": 2,
+        "iframe": 2,
+        "br": 1
+      }
+    },
+    "hashtags": {
+      "valid": [
+        {
+          "value": "#PortalAccess",
+          "text": "PortalAccess"
+        },
+        {
+          "value": "#Finance",
+          "text": "Finance"
+        },
+        {
+          "value": "#Q1Close",
+          "text": "Q1Close"
+        },
+        {
+          "value": "#Transcripts",
+          "text": "Transcripts"
+        },
+        {
+          "value": "#Security",
+          "text": "Security"
+        },
+        {
+          "value": "#Incident",
+          "text": "Incident"
+        },
+        {
+          "value": "#Urgent",
+          "text": "Urgent"
+        },
+        {
+          "value": "#ALUmniNetwork",
+          "text": "ALUmniNetwork"
+        },
+        {
+          "value": "#GraduationDay2026",
+          "text": "GraduationDay2026"
+        }
+      ],
+      "rejected": []
+    },
+    "currency_amounts": {
+      "valid": [
+        {
+          "value": "RWF 45,000",
+          "currency": "RWF",
+          "amount": "45,000",
+          "amount_normalised": "45000",
+          "position": "prefix"
+        },
+        {
+          "value": "$1,299.99",
+          "currency": "$",
+          "amount": "1,299.99",
+          "amount_normalised": "1299.99",
+          "position": "prefix"
+        },
+        {
+          "value": "$1,199.00",
+          "currency": "$",
+          "amount": "1,199.00",
+          "amount_normalised": "1199.00",
+          "position": "prefix"
+        },
+        {
+          "value": "$25",
+          "currency": "$",
+          "amount": "25",
+          "amount_normalised": "25",
+          "position": "prefix"
+        },
+        {
+          "value": "$20",
+          "currency": "$",
+          "amount": "20",
+          "amount_normalised": "20",
+          "position": "prefix"
+        },
+        {
+          "value": "USD 240.50",
+          "currency": "USD",
+          "amount": "240.50",
+          "amount_normalised": "240.50",
+          "position": "prefix"
+        },
+        {
+          "value": "USD 89.99",
+          "currency": "USD",
+          "amount": "89.99",
+          "amount_normalised": "89.99",
+          "position": "prefix"
+        },
+        {
+          "value": "USD 1,450.00",
+          "currency": "USD",
+          "amount": "1,450.00",
+          "amount_normalised": "1450.00",
+          "position": "prefix"
+        },
+        {
+          "value": "USD 10.00",
+          "currency": "USD",
+          "amount": "10.00",
+          "amount_normalised": "10.00",
+          "position": "prefix"
+        },
+        {
+          "value": "RWF 120,000",
+          "currency": "RWF",
+          "amount": "120,000",
+          "amount_normalised": "120000",
+          "position": "prefix"
+        },
+        {
+          "value": "$2,500.00",
+          "currency": "$",
+          "amount": "2,500.00",
+          "amount_normalised": "2500.00",
+          "position": "prefix"
+        },
+        {
+          "value": "¥180,000",
+          "currency": "¥",
+          "amount": "180,000",
+          "amount_normalised": "180000",
+          "position": "prefix"
+        },
+        {
+          "value": "£15.50",
+          "currency": "£",
+          "amount": "15.50",
+          "amount_normalised": "15.50",
+          "position": "prefix"
+        },
+        {
+          "value": "RWF 8,500",
+          "currency": "RWF",
+          "amount": "8,500",
+          "amount_normalised": "8500",
+          "position": "prefix"
+        },
+        {
+          "value": "EUR 42.00",
+          "currency": "EUR",
+          "amount": "42.00",
+          "amount_normalised": "42.00",
+          "position": "prefix"
+        },
+        {
+          "value": "42.00 EUR",
+          "currency": "EUR",
+          "amount": "42.00",
+          "amount_normalised": "42.00",
+          "position": "suffix"
+        },
+        {
+          "value": "$99",
+          "currency": "$",
+          "amount": "99",
+          "amount_normalised": "99",
+          "position": "prefix"
+        },
+        {
+          "value": "$99.9",
+          "currency": "$",
+          "amount": "99.9",
+          "amount_normalised": "99.9",
+          "position": "prefix"
+        },
+        {
+          "value": "$99.99",
+          "currency": "$",
+          "amount": "99.99",
+          "amount_normalised": "99.99",
+          "position": "prefix"
+        },
+        {
+          "value": "USD 99.99",
+          "currency": "USD",
+          "amount": "99.99",
+          "amount_normalised": "99.99",
+          "position": "prefix"
+        },
+        {
+          "value": "99.99 USD",
+          "currency": "USD",
+          "amount": "99.99",
+          "amount_normalised": "99.99",
+          "position": "suffix"
+        },
+        {
+          "value": "RWF 1,250,000",
+          "currency": "RWF",
+          "amount": "1,250,000",
+          "amount_normalised": "1250000",
+          "position": "prefix"
+        },
+        {
+          "value": "£0.99",
+          "currency": "£",
+          "amount": "0.99",
+          "amount_normalised": "0.99",
+          "position": "prefix"
+        },
+        {
+          "value": "€1,000",
+          "currency": "€",
+          "amount": "1,000",
+          "amount_normalised": "1000",
+          "position": "prefix"
+        }
+      ],
+      "rejected": []
+    }
+  }
+}
