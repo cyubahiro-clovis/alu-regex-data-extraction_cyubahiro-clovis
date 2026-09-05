@@ -1,6 +1,6 @@
 # ALU Regex Data Extraction & Secure Validation
 
-A regex program that pulls structured data out of messy, untrusted text — the kind an external API actually returns — and writes a clean, redacted JSON report.
+A regex program that pulls structured data out of messy, untrusted text the kind an external API actually returns and writes a clean, redacted JSON report.
 
 It handles all eight data types from the brief, validates the three ALU email domains, and treats every byte of input as hostile.
 
@@ -9,14 +9,14 @@ It handles all eight data types from the brief, validates the three ALU email do
 Python 3.8+, no packages to install.
 
 ```bash
-python3 src/main.py              # extract, and write output/sample-output.json
-python3 src/main.py --self-test  # run the 34 edge-case tests
+python3 src/main.py              
+python3 src/main.py --self-test  
 ```
 
 ```
-├── input/raw-text.txt          # messy, realistic, deliberately hostile input
-├── src/main.py                 # extraction, validation and redaction
-├── output/sample-output.json   # generated report
+├── input/raw-text.txt          
+├── src/main.py                 
+├── output/sample-output.json   
 └── README.md
 ```
 
@@ -24,9 +24,9 @@ python3 src/main.py --self-test  # run the 34 edge-case tests
 
 Three stages, kept deliberately separate:
 
-1. **Sanitise** — normalise Unicode, strip control characters, quarantine over-long lines, scan for attack signatures.
-2. **Extract** — regex finds candidates by *shape*.
-3. **Validate and redact** — Python decides whether each candidate is *real*, then masks it.
+1. **Sanitise**: normalise Unicode, strip control characters, quarantine over-long lines, scan for attack signatures.
+2. **Extract**: regex finds candidates by *shape*.
+3. **Validate and redact**: Python decides whether each candidate is *real*, then masks it.
 
 The split matters. A regex describes shape, not meaning. It can tell you something looks like a 16-digit card number; it can't tell you the checksum is valid. Cramming all that into one giant pattern gives you something nobody can read or debug. So the regex finds candidates and ordinary code decides what's genuine.
 
@@ -55,15 +55,15 @@ Three anchored validators: `@alueducation.com`, `@alumni.alueducation.com`, `@si
 k.mugisha@alueducation.com.attacker.net
 ```
 
-because the required text *is* in there — it just isn't the whole string. That exact attack sits in the input file and the program rejects it, along with `@alumni.alueducation.co` (one letter short). This is the difference between searching and validating.
+because the required text *is* in there it just isn't the whole string. That exact attack sits in the input file and the program rejects it, along with `@alumni.alueducation.co` (one letter short). This is the difference between searching and validating.
 
 ## Security
 
 The input is never trusted. It's not executed, not run through a shell, not rendered as HTML, not used to build a query.
 
-**Eleven threat signatures** — XSS, unsafe URI schemes, SQL and template and command injection, path traversal, CRLF, NoSQL operators, null bytes. The sample run catches 15 hostile constructs.
+**Eleven threat signatures**: XSS, unsafe URI schemes, SQL and template and command injection, path traversal, CRLF, NoSQL operators, null bytes. The sample run catches 15 hostile constructs.
 
-**Nothing sensitive appears in the output.** Cards show the last 4 digits only. Emails keep two characters and the domain. Hostile payloads are stored as SHA-256 fingerprints — enough to audit a finding, useless to anyone who steals the report.
+**Nothing sensitive appears in the output.** Cards show the last 4 digits only. Emails keep two characters and the domain. Hostile payloads are stored as SHA-256 fingerprints enough to audit a finding, useless to anyone who steals the report.
 
 **Two bugs worth mentioning**, because both taught me something:
 
@@ -71,7 +71,7 @@ The URL pattern originally extracted the callback server out of `<script>fetch('
 
 The SQL signature originally used a bare `--`, which fired on all ten `--- SECTION` headings in my own input file. A detector that cries wolf gets switched off, so it now requires an adjacent quote or semicolon. Detections dropped from 25 to 15, and all 15 are real.
 
-**ReDoS resistance** — every quantifier is bounded, adjacent character classes are disjoint, and there are hard caps on file size, line length and match count.
+**ReDoS resistance**: every quantifier is bounded, adjacent character classes are disjoint, and there are hard caps on file size, line length and match count.
 
 **Honest limit:** a regex blocklist is a detection aid, not a security control. Real defence is parameterised queries and a proper sanitiser. These signatures show awareness and catch obvious attacks; they aren't exhaustive.
 
@@ -79,7 +79,7 @@ The SQL signature originally used a bare `--`, which fired on all ten `--- SECTI
 
 `HTML_TAG_RE` only *inventories* tag-shaped tokens so dangerous ones get flagged. It never rebuilds markup, and it shouldn't.
 
-HTML isn't a regular language — nesting, comments and malformed markup defeat any pattern you can write. Use a real parser plus a sanitiser like `bleach` or DOMPurify. The same rule returns in the web-scraping unit: DOM selectors to extract, regex only to clean the text afterwards.
+HTML isn't a regular language nesting, comments and malformed markup defeat any pattern you can write. Use a real parser plus a sanitiser like `bleach` or DOMPurify. The same rule returns in the web-scraping unit: DOM selectors to extract, regex only to clean the text afterwards.
 
 ## Edge cases
 
@@ -113,8 +113,7 @@ The cards are the published network test numbers (Visa `4111…`, Amex `3782…`
 
 ## About the input
 
-`input/raw-text.txt` imitates a partner CRM export: agent-typed tickets, gateway logs, a hand-pasted CSV, and a block of untrusted CMS HTML. It's deliberately inconsistent — mixed separators, stray spaces, both `12:00 PM` and `12:00` in the same document — because that's what production text looks like. Attack payloads are seeded throughout so the security path actually runs.
+`input/raw-text.txt` imitates a partner CRM export: agent-typed tickets, gateway logs, a hand-pasted CSV, and a block of untrusted CMS HTML. It's deliberately inconsistent mixed separators, stray spaces, both `12:00 PM` and `12:00` in the same document, because that's what production text looks like. Attack payloads are seeded throughout so the security path actually runs.
 
 ---
 
-Built for the Front-end Web Development module at ALU.
