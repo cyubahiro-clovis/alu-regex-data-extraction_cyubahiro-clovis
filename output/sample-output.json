@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source_file": "raw-text.txt",
-    "generated_at": "2026-09-06T12:36:16+00:00",
+    "generated_at": "2026-09-06T13:57:51+00:00",
     "characters_scanned": 5743,
     "lines_scanned": 91,
     "generator": "alu-regex-data-extraction v1.0"
@@ -145,7 +145,7 @@
       "rejected": 4
     },
     "phone_numbers": {
-      "valid": 10,
+      "valid": 9,
       "rejected": 0
     },
     "credit_cards": {
@@ -503,12 +503,6 @@
           "format_seen": "national",
           "region": "RW",
           "digits": 10
-        },
-        {
-          "masked": "2507******63",
-          "format_seen": "international",
-          "region": "RW",
-          "digits": 12
         }
       ],
       "rejected": []
