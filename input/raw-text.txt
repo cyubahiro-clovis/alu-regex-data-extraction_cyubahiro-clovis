@@ -87,5 +87,5 @@ SECTION 4: SNIPPET FROM THE PARTNER'S CMS
 * Someone wrote a card as "4111111111111111111111" (22 digits) — must be rejected.
 * Someone wrote a phone as "+250788214663" and elsewhere as "+250 (0)788 214 663".
 * Shortened link in a tweet: https://alu.rw/x9Fq2 #ALUmniNetwork #GraduationDay2026
-* Duplicate of the first ticket email appears again here: mclovis@alueducation.com
+* Duplicate of the first ticket email appears again here: m.clovis@alueducation.com
 

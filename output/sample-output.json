@@ -1,8 +1,8 @@
 {
   "metadata": {
     "source_file": "raw-text.txt",
-    "generated_at": "2026-09-05T15:09:41+00:00",
-    "characters_scanned": 5742,
+    "generated_at": "2026-09-06T12:36:16+00:00",
+    "characters_scanned": 5743,
     "lines_scanned": 91,
     "generator": "alu-regex-data-extraction v1.0"
   },
@@ -137,7 +137,7 @@
   },
   "summary": {
     "emails": {
-      "valid": 18,
+      "valid": 17,
       "rejected": 2
     },
     "urls": {
@@ -170,10 +170,10 @@
     }
   },
   "alu_validation": {
-    "official_alueducation_com": 6,
+    "official_alueducation_com": 5,
     "alumni_alueducation_com": 2,
     "si_alueducation_com": 2,
-    "total_alu_addresses": 10
+    "total_alu_addresses": 9
   },
   "extracted": {
     "emails": {
@@ -296,13 +296,6 @@
           "alu_category": "alu_official",
           "is_alu": true,
           "sha256_16": "ab9d132ce2cd0f05"
-        },
-        {
-          "value": "mc*****@alueducation.com",
-          "domain": "alueducation.com",
-          "alu_category": "alu_official",
-          "is_alu": true,
-          "sha256_16": "3233b0c168e657c6"
         }
       ],
       "rejected": [
@@ -350,13 +343,6 @@
           "alu_category": "alu_official",
           "is_alu": true,
           "sha256_16": "ab9d132ce2cd0f05"
-        },
-        {
-          "value": "mc*****@alueducation.com",
-          "domain": "alueducation.com",
-          "alu_category": "alu_official",
-          "is_alu": true,
-          "sha256_16": "3233b0c168e657c6"
         }
       ],
       "alu_alumni": [
